@@ -4,14 +4,14 @@
 #
 Name     : perl-Compress-Raw-Lzma
 Version  : 2.082
-Release  : 1
+Release  : 2
 URL      : https://cpan.metacpan.org/authors/id/P/PM/PMQS/Compress-Raw-Lzma-2.082.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/P/PM/PMQS/Compress-Raw-Lzma-2.082.tar.gz
 Summary  : 'Low-Level Interface to lzma compression library'
 Group    : Development/Tools
 License  : Artistic-1.0-Perl
-Requires: perl-Compress-Raw-Lzma-lib
-Requires: perl-Compress-Raw-Lzma-man
+Requires: perl-Compress-Raw-Lzma-lib = %{version}-%{release}
+BuildRequires : buildreq-cpan
 BuildRequires : xz-dev
 
 %description
@@ -21,20 +21,22 @@ Version 2.082
 This program is free software; you can redistribute it
 and/or modify it under the same terms as Perl itself.
 
+%package dev
+Summary: dev components for the perl-Compress-Raw-Lzma package.
+Group: Development
+Requires: perl-Compress-Raw-Lzma-lib = %{version}-%{release}
+Provides: perl-Compress-Raw-Lzma-devel = %{version}-%{release}
+
+%description dev
+dev components for the perl-Compress-Raw-Lzma package.
+
+
 %package lib
 Summary: lib components for the perl-Compress-Raw-Lzma package.
 Group: Libraries
 
 %description lib
 lib components for the perl-Compress-Raw-Lzma package.
-
-
-%package man
-Summary: man components for the perl-Compress-Raw-Lzma package.
-Group: Default
-
-%description man
-man components for the perl-Compress-Raw-Lzma package.
 
 
 %prep
@@ -63,9 +65,9 @@ make TEST_VERBOSE=1 test
 %install
 rm -rf %{buildroot}
 if test -f Makefile.PL; then
-make pure_install PERL_INSTALL_ROOT=%{buildroot}
+make pure_install PERL_INSTALL_ROOT=%{buildroot} INSTALLDIRS=vendor
 else
-./Build install --installdirs=site --destdir=%{buildroot}
+./Build install --installdirs=vendor --destdir=%{buildroot}
 fi
 find %{buildroot} -type f -name .packlist -exec rm -f {} ';'
 find %{buildroot} -depth -type d -exec rmdir {} 2>/dev/null ';'
@@ -74,13 +76,13 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/site_perl/5.26.1/x86_64-linux-thread-multi/Compress/Raw/Lzma.pm
-/usr/lib/perl5/site_perl/5.26.1/x86_64-linux-thread-multi/auto/Compress/Raw/Lzma/autosplit.ix
+/usr/lib/perl5/vendor_perl/5.26.1/x86_64-linux-thread-multi/Compress/Raw/Lzma.pm
+/usr/lib/perl5/vendor_perl/5.26.1/x86_64-linux-thread-multi/auto/Compress/Raw/Lzma/autosplit.ix
+
+%files dev
+%defattr(-,root,root,-)
+/usr/share/man/man3/Compress::Raw::Lzma.3
 
 %files lib
 %defattr(-,root,root,-)
-/usr/lib/perl5/site_perl/5.26.1/x86_64-linux-thread-multi/auto/Compress/Raw/Lzma/Lzma.so
-
-%files man
-%defattr(-,root,root,-)
-/usr/share/man/man3/Compress::Raw::Lzma.3
+/usr/lib/perl5/vendor_perl/5.26.1/x86_64-linux-thread-multi/auto/Compress/Raw/Lzma/Lzma.so
