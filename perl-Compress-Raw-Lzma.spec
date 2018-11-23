@@ -4,7 +4,7 @@
 #
 Name     : perl-Compress-Raw-Lzma
 Version  : 2.082
-Release  : 2
+Release  : 3
 URL      : https://cpan.metacpan.org/authors/id/P/PM/PMQS/Compress-Raw-Lzma-2.082.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/P/PM/PMQS/Compress-Raw-Lzma-2.082.tar.gz
 Summary  : 'Low-Level Interface to lzma compression library'
@@ -76,8 +76,8 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.26.1/x86_64-linux-thread-multi/Compress/Raw/Lzma.pm
-/usr/lib/perl5/vendor_perl/5.26.1/x86_64-linux-thread-multi/auto/Compress/Raw/Lzma/autosplit.ix
+/usr/lib/perl5/vendor_perl/5.28.0/x86_64-linux-thread-multi/Compress/Raw/Lzma.pm
+/usr/lib/perl5/vendor_perl/5.28.0/x86_64-linux-thread-multi/auto/Compress/Raw/Lzma/autosplit.ix
 
 %files dev
 %defattr(-,root,root,-)
@@ -85,4 +85,4 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files lib
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.26.1/x86_64-linux-thread-multi/auto/Compress/Raw/Lzma/Lzma.so
+/usr/lib/perl5/vendor_perl/5.28.0/x86_64-linux-thread-multi/auto/Compress/Raw/Lzma/Lzma.so
