@@ -4,14 +4,15 @@
 #
 Name     : perl-Compress-Raw-Lzma
 Version  : 2.093
-Release  : 24
+Release  : 25
 URL      : https://cpan.metacpan.org/authors/id/P/PM/PMQS/Compress-Raw-Lzma-2.093.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/P/PM/PMQS/Compress-Raw-Lzma-2.093.tar.gz
-Summary  : Low-Level Interface to lzma compression library
+Summary  : 'Low-Level Interface to lzma compression library'
 Group    : Development/Tools
 License  : Artistic-1.0-Perl
 Requires: perl-Compress-Raw-Lzma-perl = %{version}-%{release}
 BuildRequires : buildreq-cpan
+BuildRequires : util-linux
 BuildRequires : xz-dev
 
 %description
@@ -25,7 +26,6 @@ and/or modify it under the same terms as Perl itself.
 Summary: dev components for the perl-Compress-Raw-Lzma package.
 Group: Development
 Provides: perl-Compress-Raw-Lzma-devel = %{version}-%{release}
-Requires: perl-Compress-Raw-Lzma = %{version}-%{release}
 Requires: perl-Compress-Raw-Lzma = %{version}-%{release}
 
 %description dev
@@ -86,6 +86,6 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Compress/Raw/Lzma.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/auto/Compress/Raw/Lzma/Lzma.so
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/auto/Compress/Raw/Lzma/autosplit.ix
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Compress/Raw/Lzma.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/auto/Compress/Raw/Lzma/Lzma.so
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/auto/Compress/Raw/Lzma/autosplit.ix
