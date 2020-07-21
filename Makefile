@@ -1,5 +1,5 @@
 PKG_NAME := perl-Compress-Raw-Lzma
-URL = https://cpan.metacpan.org/authors/id/P/PM/PMQS/Compress-Raw-Lzma-2.094.tar.gz
+URL = https://cpan.metacpan.org/authors/id/P/PM/PMQS/Compress-Raw-Lzma-2.095.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
