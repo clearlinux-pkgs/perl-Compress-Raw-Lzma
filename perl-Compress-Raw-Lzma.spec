@@ -4,7 +4,7 @@
 #
 Name     : perl-Compress-Raw-Lzma
 Version  : 2.101
-Release  : 37
+Release  : 38
 URL      : https://cpan.metacpan.org/authors/id/P/PM/PMQS/Compress-Raw-Lzma-2.101.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/P/PM/PMQS/Compress-Raw-Lzma-2.101.tar.gz
 Summary  : 'Low-Level Interface to lzma compression library'
