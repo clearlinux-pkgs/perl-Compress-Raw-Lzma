@@ -4,7 +4,7 @@
 #
 Name     : perl-Compress-Raw-Lzma
 Version  : 2.103
-Release  : 40
+Release  : 41
 URL      : https://cpan.metacpan.org/authors/id/P/PM/PMQS/Compress-Raw-Lzma-2.103.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/P/PM/PMQS/Compress-Raw-Lzma-2.103.tar.gz
 Summary  : 'Low-Level Interface to lzma compression library'
@@ -85,6 +85,4 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.34.0/x86_64-linux-thread-multi/Compress/Raw/Lzma.pm
-/usr/lib/perl5/vendor_perl/5.34.0/x86_64-linux-thread-multi/auto/Compress/Raw/Lzma/Lzma.so
-/usr/lib/perl5/vendor_perl/5.34.0/x86_64-linux-thread-multi/auto/Compress/Raw/Lzma/autosplit.ix
+/usr/lib/perl5/*
