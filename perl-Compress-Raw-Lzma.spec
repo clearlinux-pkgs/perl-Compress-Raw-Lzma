@@ -4,10 +4,10 @@
 # Using build pattern: cpan
 #
 Name     : perl-Compress-Raw-Lzma
-Version  : 2.205
-Release  : 45
-URL      : https://cpan.metacpan.org/authors/id/P/PM/PMQS/Compress-Raw-Lzma-2.205.tar.gz
-Source0  : https://cpan.metacpan.org/authors/id/P/PM/PMQS/Compress-Raw-Lzma-2.205.tar.gz
+Version  : 2.206
+Release  : 46
+URL      : https://cpan.metacpan.org/authors/id/P/PM/PMQS/Compress-Raw-Lzma-2.206.tar.gz
+Source0  : https://cpan.metacpan.org/authors/id/P/PM/PMQS/Compress-Raw-Lzma-2.206.tar.gz
 Summary  : 'Low-Level Interface to lzma compression library'
 Group    : Development/Tools
 License  : Artistic-1.0-Perl
@@ -20,8 +20,8 @@ BuildRequires : xz-dev
 
 %description
 Compress-Raw-Lzma
-Version 2.205
-16 July 2023
+Version 2.206
+25 July 2023
 This program is free software; you can redistribute it
 and/or modify it under the same terms as Perl itself.
 
@@ -45,10 +45,10 @@ perl components for the perl-Compress-Raw-Lzma package.
 
 
 %prep
-%setup -q -n Compress-Raw-Lzma-2.205
-cd %{_builddir}/Compress-Raw-Lzma-2.205
+%setup -q -n Compress-Raw-Lzma-2.206
+cd %{_builddir}/Compress-Raw-Lzma-2.206
 pushd ..
-cp -a Compress-Raw-Lzma-2.205 buildavx2
+cp -a Compress-Raw-Lzma-2.206 buildavx2
 popd
 
 %build
